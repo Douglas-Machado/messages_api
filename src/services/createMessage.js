@@ -1,12 +1,18 @@
 const prismaClient = require('../prisma')
 
 exports.execute = async function (title, content){
-  const message = await prismaClient.message.create({
-    data: {
-      title,
-      content,
+  try{
+    const message = await prismaClient.message.create({
+      data: {
+        title,
+        content,
+      }
+    })
+    return message;
+  }catch{
+    (e) => {
+      console.log(e)
     }
-  })
+  }
 
-  return message;
 }
