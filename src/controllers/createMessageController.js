@@ -3,6 +3,7 @@ const createMessage = require("../services/createMessage")
 
 exports.handle = async function (req, res){
   try{
+    console.log("Olá")
     const { title, content } = req.body;
     if(!title || !content) {
         return res.json({error: "missing params"})
