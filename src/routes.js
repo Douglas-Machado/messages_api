@@ -8,15 +8,14 @@ const deleteMessageController = require('./controllers/deleteMessageController')
 
 const updateMessageController = require('./controllers/updateMessageController')
 
-
 const router = Router()
-
-router.post("/messages", createMessageController.handle)
 
 router.get("/messages", messagesController.handle)
 
-router.delete("/message", deleteMessageController.handle)
+router.post("/messages", createMessageController.handle)
 
 router.put("/message", updateMessageController.handle)
+
+router.delete("/message", deleteMessageController.handle)
 
 module.exports = router
