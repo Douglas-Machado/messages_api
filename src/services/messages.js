@@ -1,5 +1,4 @@
-const { PrismaClient } = require('@prisma/client')
-const prismaClient = new PrismaClient
+const prismaClient = require('../prismaConfig')
 
 exports.execute = async () => {
   const messagesList = await prismaClient.message.findMany({

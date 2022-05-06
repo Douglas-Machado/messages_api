@@ -18,6 +18,8 @@
 
  Run `npm install` or `yarn` to get the packages
 
+ Run `prisma migrate <your db name>` to generate migration
+
  Run `npm run dev` or `yarn dev` to start the application
 
 ### Request examples

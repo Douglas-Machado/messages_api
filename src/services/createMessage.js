@@ -1,4 +1,4 @@
-const prismaClient = require('../prisma')
+const prismaClient = require('../prismaConfig')
 
 exports.execute = async function (title, content){
   const message = await prismaClient.message.create({
