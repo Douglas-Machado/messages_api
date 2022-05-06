@@ -1,4 +1,4 @@
-const prismaClient = require('../prisma')
+const prismaClient = require('../prismaConfig')
 
 const messages = require('./messages')
 

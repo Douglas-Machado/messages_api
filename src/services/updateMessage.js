@@ -1,4 +1,4 @@
-const prismaClient = require('../prisma')
+const prismaClient = require('../prismaConfig')
 
 exports.execute = async function(title, content) {
   const message = await prismaClient.message.update({
@@ -9,8 +9,6 @@ exports.execute = async function(title, content) {
       content: content
     }
   })
-
-  console.log(message)
 
   return message
 }
